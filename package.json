@@ -6,6 +6,9 @@
     "name": "Peter McMillan",
     "email": "sprawld@gmail.com"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "ansi-colors": "^3.2.1",
     "request": "^2.88.0",
@@ -23,6 +26,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "chai": "^4.2.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.4.0",
+    "mocha": "^5.2.0"
   }
 }

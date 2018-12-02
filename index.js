@@ -12,18 +12,18 @@ module.exports = function(urls){
 		cb();
 	});
 
-	if(typeof urls === "object") {
+	if(Array.isArray(urls)) { 
+		// array
+		var files = urls.map(function(i) {
+			return [i.split('/').pop(),i];
+		});
+	} else if(typeof urls === "object") {
 		var files = [];
 		for(var i in urls) {
 			files.push([i,urls[i]]);
 		}
 	} else if(typeof urls === "string") {
 		var files = [[urls.split('/').pop(),urls]];
-	} else {
-		// array
-		var files = urls.map(function(i) {
-			return [i.split('/').pop(),i];
-		});
 	}
 	
 	var downloadCount = 0;
